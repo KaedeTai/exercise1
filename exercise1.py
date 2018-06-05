@@ -6,7 +6,6 @@ count = 0
 abs = 0
 
 for file in glob('data/*'):
-    print file
     for line in open(file):
         (date, time, symbol, price, qty, eott) = line.strip().split(' ')
         price = float(price)
@@ -19,6 +18,4 @@ for file in glob('data/*'):
         count += qty
         abs += fabs(price * qty)
 
-        print price, qty
-
-print sum, count, abs
+print(sum, count, abs)

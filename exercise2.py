@@ -22,4 +22,4 @@ for file in glob('data/*'):
 keys = list(out.keys())
 keys.sort()
 for key in keys:
-    print key, out[key]
+    print('%s %.2f' % (key, out[key]))
