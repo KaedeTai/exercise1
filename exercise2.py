@@ -7,7 +7,6 @@ abs = 0
 out = {}
 
 for file in glob('data/*'):
-    print file
     for line in open(file):
         (date, time, symbol, price, qty, eott) = line.strip().split(' ')
         price = float(price)
@@ -20,7 +19,5 @@ for file in glob('data/*'):
         if trade > out[key]:
             out[key] = trade
 
-        print key, trade
-
-for key in out:
+for key in list(out.keys).sort():
     print key, out[key]
