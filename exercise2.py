@@ -22,4 +22,5 @@ for file in glob('data/*'):
 
         print key, trade
 
-print out
+for key in out:
+    print key, out[key]
