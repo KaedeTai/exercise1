@@ -19,5 +19,5 @@ for file in glob('data/*'):
         if trade > out[key]:
             out[key] = trade
 
-for key in list(out.keys).sort():
+for key in list(out.keys()).sort():
     print key, out[key]
